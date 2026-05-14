@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | AB Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-login page-portal-hub">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand brand-lockup">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-word">Solutions</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <div class="container portal-hub">
+        <div class="portal-hub-intro">
+          <p class="eyebrow">AB Solutions</p>
+          <h1>Choose your portal</h1>
+          <p class="muted">Vendors and project management use <strong>separate sign-in pages</strong>. Vendors handle project selection and meeting coordination, while Project Admin and Admin2 work the remaining onboarding, requirements, and kickoff stages. The shared submission record keeps the vendor and project team login relationship intact.</p>
+          <p class="muted task-chain-inline"><strong>Workflow split:</strong> vendor portal covers project enquiry and communication meeting; project team portal covers onboarding, requirement gathering, and kickoff.</p>
+          <button type="button" class="btn btn-ghost" id="workflowDialogOpen">View workflow stages</button>
+          <dialog id="workflowDialog" class="workflow-dialog">
+            <div class="dialog-header">
+              <h3>Workflow stages</h3>
+              <button type="button" class="dialog-close" data-close aria-label="Close dialog">×</button>
+            </div>
+            <div class="dialog-body">
+              <p>All stages are connected to the vendor–project pairing and the shared login relationship.</p>
+              <ol>
+                <li>Vendor enquiry</li>
+                <li>Vendor meeting &amp; notes (Google Meet or Microsoft Teams)</li>
+                <li>Vendor onboarding</li>
+                <li>Project onboarding</li>
+                <li>Requirement gathering</li>
+                <li>Project kickoff</li>
+              </ol>
+            </div>
+            <div class="dialog-actions">
+              <button type="button" class="btn btn-primary" data-close>Close</button>
+            </div>
+          </dialog>
+        </div>
+        <div class="portal-hub-cards">
+          <a class="portal-hub-card" href="vendor-login.html">
+            <span class="portal-hub-card-kicker">Suppliers &amp; partners</span>
+            <h2>Vendor login</h2>
+            <p>Submit enquiries, record Meet/Teams sessions, and advance onboarding through kickoff.</p>
+            <span class="btn btn-primary portal-hub-fake-btn">Continue as vendor →</span>
+          </a>
+          <a class="portal-hub-card" href="pm-login.html">
+            <span class="portal-hub-card-kicker">Project management</span>
+            <h2>Project team login</h2>
+            <p>Project Admin and Admin2 sign in here to review vendors and accept engagements.</p>
+            <span class="btn btn-primary portal-hub-fake-btn">Continue as PM →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 AB Solutions. Separate portals for vendors and project management.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("menuToggle")?.addEventListener("click", () => {
+      document.getElementById("mainNav")?.classList.toggle("open");
+    });
+  </script>
+  <script src="workflow-dialog.js"></script>
+</body>
+</html>

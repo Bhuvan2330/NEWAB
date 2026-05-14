@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor login | AB Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-login page-vendor-login">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand brand-lockup">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-word">Solutions</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html#home">Home</a>
+        <a href="login.html">Login</a>
+        <a href="pm-login.html">Project management</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <div class="container login-wrap login-wrap-single">
+        <div class="login-intro">
+          <p class="eyebrow">Vendor access</p>
+          <h2>Vendor login</h2>
+          <p class="muted">Vendors manage only the project selection and communication meeting details for each engagement: select a project, then record meeting coordination via Google Meet or Microsoft Teams. Project Admin and Admin2 handle the remaining onboarding, requirements, and kickoff stages in their portal.</p>
+          <button type="button" class="btn btn-ghost" id="workflowDialogOpen">View workflow stages</button>
+          <dialog id="workflowDialog" class="workflow-dialog">
+            <div class="dialog-header">
+              <h3>Vendor workflow</h3>
+              <button type="button" class="dialog-close" data-close aria-label="Close dialog">×</button>
+            </div>
+            <div class="dialog-body">
+              <p>Vendor login covers the initial engagement stages. Project Admin and Admin2 continue with the rest of the workflow.</p>
+              <ol>
+                <li>Vendor enquiry / project selection</li>
+                <li>Communication meeting &amp; notes (Google Meet or Microsoft Teams)</li>
+              </ol>
+            </div>
+            <div class="dialog-actions">
+              <button type="button" class="btn btn-primary" data-close>Close</button>
+            </div>
+          </dialog>
+          <p class="muted"><a href="pm-login.html">Project Admin / Admin2 sign in here →</a></p>
+          <div class="credential-panel" aria-label="Demo vendor account">
+            <h3 class="credential-title">Demo vendor</h3>
+            <dl class="credential-list">
+              <div><dt>Email</dt><dd><code>vendor@absolutions.demo</code></dd></div>
+              <div><dt>Password</dt><dd><code>vendor123</code></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="login-card">
+          <h3 class="panel-heading">Sign in as vendor</h3>
+          <form class="login-form" id="vendorLoginForm">
+            <label>Email<input name="email" type="email" autocomplete="username" placeholder="vendor@absolutions.demo" required /></label>
+            <label>Password<input name="password" type="password" autocomplete="current-password" placeholder="••••••••" required /></label>
+            <button type="submit" class="btn btn-primary">Enter vendor workspace</button>
+          </form>
+          <p class="login-error" id="loginError" role="alert"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 AB Solutions. Vendor portal sign-in.</p>
+    </div>
+  </footer>
+
+  <script src="auth-shared.js"></script>
+  <script src="vendor-login.js"></script>
+  <script src="workflow-dialog.js"></script>
+</body>
+</html>

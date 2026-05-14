@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workspace | AB Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-tasks">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand brand-lockup">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-word">Solutions</span>
+      </a>
+      <div class="header-meta">
+        <span class="role-pill" id="rolePill">Role</span>
+        <button type="button" class="btn btn-ghost btn-small" id="logoutBtn">Log out</button>
+      </div>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html#home">Marketing site</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="portal-main">
+    <div class="container portal-layout" id="portalRoot">
+      <p class="portal-loading" id="portalLoading">Loading workspace…</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 AB Solutions. Vendor, Project Admin, and Admin2 collaboration workspace.</p>
+    </div>
+  </footer>
+
+  <script src="portal.js"></script>
+</body>
+</html>

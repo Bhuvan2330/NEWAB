@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project management login | AB Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="page-login page-pm-login">
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand brand-lockup">
+        <span class="brand-mark" aria-hidden="true">AB</span>
+        <span class="brand-word">Solutions</span>
+      </a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle navigation">☰</button>
+      <nav class="nav" id="mainNav">
+        <a href="index.html#home">Home</a>
+        <a href="login.html">Login</a>
+        <a href="vendor-login.html">Vendor login</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="login-section">
+      <div class="container login-wrap">
+        <div class="login-intro">
+          <p class="eyebrow">Project management</p>
+          <h2>Project team sign-in</h2>
+          <p class="muted"><strong>Project Admin</strong> and <strong>Admin2</strong> (Assistant Admin) use this page. Together they accept each vendor–project pairing after the vendor has handled project selection and communication meeting coordination. Project management then manages the remaining workflow stages <strong>3 → 5 → 6 → 7</strong> (onboarding, requirements, and kickoff).</p>
+          <button type="button" class="btn btn-ghost" id="workflowDialogOpen">View workflow stages</button>
+          <dialog id="workflowDialog" class="workflow-dialog">
+            <div class="dialog-header">
+              <h3>Workflow stages</h3>
+              <button type="button" class="dialog-close" data-close aria-label="Close dialog">×</button>
+            </div>
+            <div class="dialog-body">
+              <p>All stages are connected to the vendor–project pairing and the shared login relationship.</p>
+              <ol>
+                <li>Vendor enquiry</li>
+                <li>Vendor meeting &amp; notes (Google Meet or Microsoft Teams)</li>
+                <li>Vendor onboarding</li>
+                <li>Project onboarding</li>
+                <li>Requirement gathering</li>
+                <li>Project kickoff</li>
+              </ol>
+            </div>
+            <div class="dialog-actions">
+              <button type="button" class="btn btn-primary" data-close>Close</button>
+            </div>
+          </dialog>
+          <p class="muted"><a href="vendor-login.html">Vendors sign in here →</a></p>
+          <div class="credential-panel" aria-label="Demo project management accounts">
+            <h3 class="credential-title">Demo accounts</h3>
+            <dl class="credential-list">
+              <div><dt>Project Admin</dt><dd><code>projectadmin@absolutions.demo</code> · <code>pa123</code></dd></div>
+              <div><dt>Admin2</dt><dd><code>admin2@absolutions.demo</code> · <code>a2123</code></dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="login-card">
+          <div class="login-tabs" role="tablist">
+            <button class="tab-button active" type="button" data-target="pmTabPa" role="tab" aria-selected="true">Project Admin</button>
+            <button class="tab-button" type="button" data-target="pmTabA2" role="tab" aria-selected="false">Admin2</button>
+          </div>
+          <div class="tab-panels">
+            <div class="tab-panel active" id="pmTabPa" role="tabpanel">
+              <h3 class="panel-heading">Project Admin</h3>
+              <form class="login-form" id="pmFormPa" data-role="projectAdmin">
+                <label>Email<input name="email" type="email" autocomplete="username" placeholder="projectadmin@absolutions.demo" required /></label>
+                <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
+                <button type="submit" class="btn btn-primary">Enter as Project Admin</button>
+              </form>
+            </div>
+            <div class="tab-panel" id="pmTabA2" role="tabpanel">
+              <h3 class="panel-heading">Admin2 (Assistant Admin)</h3>
+              <form class="login-form" id="pmFormA2" data-role="admin2">
+                <label>Email<input name="email" type="email" autocomplete="username" placeholder="admin2@absolutions.demo" required /></label>
+                <label>Password<input name="password" type="password" autocomplete="current-password" required /></label>
+                <button type="submit" class="btn btn-primary">Enter as Admin2</button>
+              </form>
+            </div>
+          </div>
+          <p class="login-error" id="pmLoginError" role="alert"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 AB Solutions. Project management portal sign-in.</p>
+    </div>
+  </footer>
+
+  <script src="auth-shared.js"></script>
+  <script src="pm-login.js"></script>
+  <script src="workflow-dialog.js"></script>
+</body>
+</html>
